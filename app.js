@@ -48,11 +48,7 @@ class Player {
     }
 }
 
-function handleMarkSelection(mark) {
-    player = new Player('player', mark);
-    const computerMark = mark === 'X' ? 'O' : 'X';
-    computer = new Player('computer', computerMark);
-}
+
 
 function playerMove(e) {
     player.playerPlaying(e);
@@ -95,6 +91,13 @@ function reset() {
 }
 
 resetbtn.addEventListener('click', reset);
+
+function handleMarkSelection(mark) {
+    player = new Player('player', mark);
+    const computerMark = mark === 'X' ? 'O' : 'X';
+    computer = new Player('computer', computerMark);
+}
+
 
 xbtn.addEventListener('click', () => {
     handleMarkSelection('X');
